@@ -2,6 +2,9 @@ const express = require('express')
 const bodyParser = require('body-parser')
 const cors = require('cors')
 
+// Models
+const db = require('./app/models')
+
 const app = express()
 
 let whiteList = [
@@ -21,9 +24,13 @@ let corsOption = {
 
 app.use(cors(corsOption))
 
-// parse request application/json x-www-form-urlencode
+// parse requests application/json
 app.use(bodyParser.json())
+// parse requests application/json x-www-form-urlencode
 app.use(bodyParser.urlencoded({ extended: true }))
+
+// Sync database
+db.sequelize.sync()
 
 // membuat route API endpoint
 app.get('/', (req, res) => {
