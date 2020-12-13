@@ -25,7 +25,7 @@ app.use(cors(corsOption))
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: true }))
 
-// membuat route
+// membuat route API endpoint
 app.get('/', (req, res) => {
     res.json({
         message: 'Welcome Mis Arianto'
