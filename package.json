@@ -15,12 +15,23 @@
     "Express.js",
     "CRUD",
     "REST",
-    "API"
+    "API",
+    "MySQL",
+    "nodemon",
+    "cors",
+    "sequelize"
   ],
   "author": "Mis Arianto",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/MisArianto/node_crud_rest_api/issues"
   },
-  "homepage": "https://github.com/MisArianto/node_crud_rest_api#readme"
+  "homepage": "https://github.com/MisArianto/node_crud_rest_api#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "mysql2": "^2.2.5",
+    "nodemon": "^2.0.6",
+    "sequelize": "^6.3.5"
+  }
 }
