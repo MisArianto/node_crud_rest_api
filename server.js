@@ -24,3 +24,16 @@ app.use(cors(corsOption))
 // parse request application/json x-www-form-urlencode
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: true }))
+
+// membuat route
+app.get('/', (req, res) => {
+    res.json({
+        message: 'Welcome Mis Arianto'
+    })
+})
+
+const PORT = process.env.PORT || 8080
+
+app.listen(PORT, () => {
+    console.log(`Server is running on http://localhost:${PORT}`)
+})
