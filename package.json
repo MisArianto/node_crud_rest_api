@@ -1,0 +1,26 @@
+{
+  "name": "crud_rest_api",
+  "version": "1.0.0",
+  "description": "CRUD REST API",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MisArianto/node_crud_rest_api.git"
+  },
+  "keywords": [
+    "Node.js",
+    "Express.js",
+    "CRUD",
+    "REST",
+    "API"
+  ],
+  "author": "Mis Arianto",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MisArianto/node_crud_rest_api/issues"
+  },
+  "homepage": "https://github.com/MisArianto/node_crud_rest_api#readme"
+}
