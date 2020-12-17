@@ -7,22 +7,22 @@ const db = require('./app/models')
 
 const app = express()
 
-let whiteList = [
-    'http://localhost:8081'
-]
+// let whiteList = [
+//     'http://localhost:8080'
+// ]
 
-// Cross-Origin Resource Sharing (CORS)
-let corsOption = {
-    origin: (origin, callback) => {
-        if (whiteList.indexOf(origin) !== -1 || !origin) {
-            callback(null, true)
-        } else {
-            callback(new Error('Not allowed by CORS'))
-        }
-    }
-}
+// // Cross-Origin Resource Sharing (CORS)
+// let corsOption = {
+//     origin: (origin, callback) => {
+//         if (whiteList.indexOf(origin) !== -1 || !origin) {
+//             callback(null, true)
+//         } else {
+//             callback(new Error('Not allowed by CORS'))
+//         }
+//     }
+// }
 
-app.use(cors(corsOption))
+// app.use(cors(corsOption))
 
 // parse requests application/json
 app.use(bodyParser.json())
@@ -32,12 +32,15 @@ app.use(bodyParser.urlencoded({ extended: true }))
 // Sync database
 db.sequelize.sync()
 
+// routes
+require('./app/routes/post.routes')(app)
+
 // membuat route API endpoint
-app.get('/', (req, res) => {
-    res.json({
-        message: 'Welcome Mis Arianto'
-    })
-})
+// app.get('/', (req, res) => {
+//     res.json({
+//         message: 'Welcome Mis Arianto'
+//     })
+// })
 
 const PORT = process.env.PORT || 8080
 
